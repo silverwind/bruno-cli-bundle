@@ -1,6 +1,6 @@
 {
   "name": "bruno-cli-bundle",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Bundled version of @usebruno/cli",
   "author": "silverwind",
   "repository": "silverwind/bruno-cli-bundle",
