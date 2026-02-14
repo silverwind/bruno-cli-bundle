@@ -1,4 +1,4 @@
-SOURCE_FILES := node_modules src
+SOURCE_FILES := node_modules index.ts
 DIST_FILES := dist/index.js
 
 node_modules: pnpm-lock.yaml

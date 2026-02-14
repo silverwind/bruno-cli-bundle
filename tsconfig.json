@@ -1,3 +1,6 @@
 {
-  "extends": "typescript-config-silverwind"
+  "extends": "typescript-config-silverwind",
+  "compilerOptions": {
+    "types": ["node"]
+  }
 }

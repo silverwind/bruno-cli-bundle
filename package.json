@@ -18,6 +18,8 @@
     "node": ">=20"
   },
   "devDependencies": {
+    "@types/node": "25.2.3",
+    "@types/yargs": "17.0.35",
     "@typescript/native-preview": "7.0.0-dev.20260213.1",
     "@usebruno/cli": "3.0.3",
     "chalk": "3.0.0",
