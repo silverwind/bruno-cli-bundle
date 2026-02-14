@@ -8,4 +8,11 @@ export default defineConfig(nodeCli({
   clean: true,
   format: "esm",
   target: "node20",
+  inputOptions: {
+    // suppress warnings about eval() in @usebruno/requests
+    onLog(level, log, defaultHandler) {
+      if (log.code === "EVAL") return;
+      defaultHandler(level, log);
+    },
+  },
 }));
