@@ -3,7 +3,7 @@ import {defineConfig} from "tsdown";
 
 export default defineConfig(nodeCli({
   url: import.meta.url,
-  entry: ["./src/index.js"],
+  entry: ["./index.ts"],
   shims: true,
   clean: true,
   format: "esm",
