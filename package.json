@@ -28,10 +28,10 @@
     "eslint-config-silverwind": "131.0.2",
     "tsdown": "0.21.7",
     "tsdown-config-silverwind": "2.0.5",
-    "typescript": "5.9.3",
+    "typescript": "6.0.2",
     "typescript-config-silverwind": "17.0.0",
     "updates": "17.14.0",
-    "updates-config-silverwind": "2.0.1",
+    "updates-config-silverwind": "2.1.0",
     "versions": "14.2.7",
     "vitest": "4.1.4",
     "yargs": "18.0.0"
