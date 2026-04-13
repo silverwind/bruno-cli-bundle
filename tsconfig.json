@@ -1,6 +1,6 @@
 {
   "extends": "typescript-config-silverwind",
   "compilerOptions": {
-    "types": ["node"]
+    "types": ["jest-extended", "node"]
   }
 }

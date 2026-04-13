@@ -29,6 +29,9 @@ importers:
       eslint-config-silverwind:
         specifier: 131.0.4
         version: 131.0.4(eslint@10.2.0)(typescript@6.0.2)
+      jest-extended:
+        specifier: 7.0.0
+        version: 7.0.0(typescript@6.0.2)
       tsdown:
         specifier: 0.21.7
         version: 0.21.7(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(@typescript/native-preview@7.0.0-dev.20260413.1)(typescript@6.0.2)
@@ -463,6 +466,18 @@ packages:
     resolution: {integrity: sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==}
     engines: {node: '>=18.18'}
 
+  '@jest/diff-sequences@30.3.0':
+    resolution: {integrity: sha512-cG51MVnLq1ecVUaQ3fr6YuuAOitHK1S4WUJHnsPFE/quQr33ADUx1FfrTCpMCRxvy0Yr9BThKpDjSlcTi91tMA==}
+    engines: {node: ^18.14.0 || ^20.0.0 || ^22.0.0 || >=24.0.0}
+
+  '@jest/get-type@30.1.0':
+    resolution: {integrity: sha512-eMbZE2hUnx1WV0pmURZY9XoXPkUYjpc55mb0CrhtdWLtzMQPFvu/rZkTLZFTsdaVQa+Tr4eWAteqcUzoawq/uA==}
+    engines: {node: ^18.14.0 || ^20.0.0 || ^22.0.0 || >=24.0.0}
+
+  '@jest/schemas@30.0.5':
+    resolution: {integrity: sha512-DmdYgtezMkh3cpU8/1uyXakv3tJRcmcXxBOcO0tbaozPwpmh4YMsnWrQm9ZmZMfa5ocbxzbFk6O4bDPEc/iAnA==}
+    engines: {node: ^18.14.0 || ^20.0.0 || ^22.0.0 || >=24.0.0}
+
   '@jitl/quickjs-ffi-types@0.29.2':
     resolution: {integrity: sha512-069uQTiEla2PphXg6UpyyJ4QXHkTj3S9TeXgaMCd8NDYz3ODBw5U/rkg6fhuU8SMpoDrWjEzybmV5Mi2Pafb5w==}
 
@@ -743,6 +758,9 @@ packages:
 
   '@rolldown/pluginutils@1.0.0-rc.15':
     resolution: {integrity: sha512-UromN0peaE53IaBRe9W7CjrZgXl90fqGpK+mIZbA3qSTeYqg3pqpROBdIPvOG3F5ereDHNwoHBI2e50n1BDr1g==}
+
+  '@sinclair/typebox@0.34.49':
+    resolution: {integrity: sha512-brySQQs7Jtn0joV8Xh9ZV/hZb9Ozb0pmazDIASBkYKCjXrXU3mpcFahmK/z4YDhGkQvP9mWJbVyahdtU5wQA+A==}
 
   '@smithy/config-resolver@4.4.14':
     resolution: {integrity: sha512-N55f8mPEccpzKetUagdvmAy8oohf0J5cuj9jLI1TaSceRlq0pJsIZepY3kmAXAhyxqXPV6hDerDQhqQPKWgAoQ==}
@@ -1233,6 +1251,10 @@ packages:
     resolution: {integrity: sha512-zbB9rCJAT1rbjiVDb2hqKFHNYLxgtk8NURxZ3IZwD3F6NtxbXZQCnnSi1Lkx+IDohdPlFp222wVALIheZJQSEg==}
     engines: {node: '>=8'}
 
+  ansi-styles@5.2.0:
+    resolution: {integrity: sha512-Cxwpt2SfTzTtXcfOlzGEee8O+c+MmUgGrNiBcXnuWxuFJHe6a5Hz7qwhwe5OgaSYI0IJvkLqWX1ASG+cJOkEiA==}
+    engines: {node: '>=10'}
+
   ansi-styles@6.2.3:
     resolution: {integrity: sha512-4Dj6M28JB+oAH8kFkTLUo+a2jwOFkuqb3yucU0CANcRRUbxS0cP0nZYCGjcc3BNXwRIsUVmDGgzawme7zvJHvg==}
     engines: {node: '>=12'}
@@ -1358,6 +1380,10 @@ packages:
   chalk@3.0.0:
     resolution: {integrity: sha512-4D3B6Wf41KOYRFdszmDqMCGq5VV/uMAB273JILmO+3jAlh8X4qDtdtgCR3fxtbLEMzSx22QdhnDcJvu2u1fVwg==}
     engines: {node: '>=8'}
+
+  chalk@4.1.2:
+    resolution: {integrity: sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==}
+    engines: {node: '>=10'}
 
   chalk@5.6.2:
     resolution: {integrity: sha512-7NzBL0rN6fMUW+f7A6Io4h40qQlG+xGmtMxfbnH/K7TAtt8JQWVQK+6g0UXKMeVJoyV5EkkNsErQ8pVD3bLHbA==}
@@ -1911,6 +1937,20 @@ packages:
     resolution: {integrity: sha512-WhB9zCku7EGTj/HQQRz5aUQEUeoQZH2bWcltRErOpymJ4boYE6wL9Tbr23krRPSZ+C5zqNSrSw+Cc7sZZ4b7vg==}
     engines: {node: '>=0.10.0'}
 
+  jest-diff@30.3.0:
+    resolution: {integrity: sha512-n3q4PDQjS4LrKxfWB3Z5KNk1XjXtZTBwQp71OP0Jo03Z6V60x++K5L8k6ZrW8MY8pOFylZvHM0zsjS1RqlHJZQ==}
+    engines: {node: ^18.14.0 || ^20.0.0 || ^22.0.0 || >=24.0.0}
+
+  jest-extended@7.0.0:
+    resolution: {integrity: sha512-96jBsVJDxZKFh+kWY7E18Is2usUsUYtBn97MxCtb4COnbgD4aE1h+P0fdFQNeJaI6KOeduas4Numc9yTuk0+Gw==}
+    engines: {node: ^20.9.0 || ^22.11.0 || ^24.11.0 || >=25.0.0}
+    peerDependencies:
+      jest: '>=27.2.5'
+      typescript: '>=5.0.0'
+    peerDependenciesMeta:
+      jest:
+        optional: true
+
   js-md4@0.3.2:
     resolution: {integrity: sha512-/GDnfQYsltsjRswQhN9fhv3EMw2sCpUdrdxyWDOUK7eyD++r3gRhzgiQgc/x4MAv2i1iuQ4lxO5mvqM3vj4bwA==}
 
@@ -2296,6 +2336,10 @@ packages:
     engines: {node: '>=14'}
     hasBin: true
 
+  pretty-format@30.3.0:
+    resolution: {integrity: sha512-oG4T3wCbfeuvljnyAzhBvpN45E8iOTXCU/TD3zXW80HA3dQ4ahdqMkWGiPWZvjpQwlbyHrPTWUAqUzGzv4l1JQ==}
+    engines: {node: ^18.14.0 || ^20.0.0 || ^22.0.0 || >=24.0.0}
+
   process@0.11.10:
     resolution: {integrity: sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A==}
     engines: {node: '>= 0.6.0'}
@@ -2327,6 +2371,9 @@ packages:
   quickjs-emscripten@0.29.2:
     resolution: {integrity: sha512-SlvkvyZgarReu2nr4rkf+xz1vN0YDUz7sx4WHz8LFtK6RNg4/vzAGcFjE7nfHYBEbKrzfIWvKnMnxZkctQ898w==}
     engines: {node: '>=16.0.0'}
+
+  react-is@18.3.1:
+    resolution: {integrity: sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==}
 
   recast@0.23.11:
     resolution: {integrity: sha512-YTUo+Flmw4ZXiWfQKGcwwc11KnoRAYgzAE2E7mXKCjSviTKShtxBsN6YUUBB2gtaBzKzeKunxhUwNHQuRryhWA==}
@@ -3621,6 +3668,14 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.3': {}
 
+  '@jest/diff-sequences@30.3.0': {}
+
+  '@jest/get-type@30.1.0': {}
+
+  '@jest/schemas@30.0.5':
+    dependencies:
+      '@sinclair/typebox': 0.34.49
+
   '@jitl/quickjs-ffi-types@0.29.2': {}
 
   '@jitl/quickjs-wasmfile-debug-asyncify@0.29.2':
@@ -3809,6 +3864,8 @@ snapshots:
   '@rolldown/pluginutils@1.0.0-rc.12': {}
 
   '@rolldown/pluginutils@1.0.0-rc.15': {}
+
+  '@sinclair/typebox@0.34.49': {}
 
   '@smithy/config-resolver@4.4.14':
     dependencies:
@@ -4271,7 +4328,7 @@ snapshots:
       '@usebruno/js': 0.46.1(debug@4.4.3)
       '@usebruno/lang': 0.35.0
       '@usebruno/requests': 0.16.2
-      aws4-axios: 3.4.0(axios@1.13.6)
+      aws4-axios: 3.4.0(axios@1.13.6(debug@4.4.3))
       axios: 1.13.6(debug@4.4.3)
       axios-ntlm: 1.4.6(debug@4.4.3)
       chai: 4.5.0
@@ -4464,6 +4521,8 @@ snapshots:
     dependencies:
       color-convert: 2.0.1
 
+  ansi-styles@5.2.0: {}
+
   ansi-styles@6.2.3: {}
 
   ansis@4.2.0: {}
@@ -4490,7 +4549,7 @@ snapshots:
 
   atob@2.1.2: {}
 
-  aws4-axios@3.4.0(axios@1.13.6):
+  aws4-axios@3.4.0(axios@1.13.6(debug@4.4.3)):
     dependencies:
       '@aws-sdk/client-sts': 3.1029.0
       aws4: 1.13.2
@@ -4580,6 +4639,11 @@ snapshots:
   chai@6.2.2: {}
 
   chalk@3.0.0:
+    dependencies:
+      ansi-styles: 4.3.0
+      supports-color: 7.2.0
+
+  chalk@4.1.2:
     dependencies:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
@@ -5136,6 +5200,18 @@ snapshots:
 
   isobject@3.0.1: {}
 
+  jest-diff@30.3.0:
+    dependencies:
+      '@jest/diff-sequences': 30.3.0
+      '@jest/get-type': 30.1.0
+      chalk: 4.1.2
+      pretty-format: 30.3.0
+
+  jest-extended@7.0.0(typescript@6.0.2):
+    dependencies:
+      jest-diff: 30.3.0
+      typescript: 6.0.2
+
   js-md4@0.3.2: {}
 
   js-tokens@4.0.0: {}
@@ -5463,6 +5539,12 @@ snapshots:
 
   prettier@3.8.2: {}
 
+  pretty-format@30.3.0:
+    dependencies:
+      '@jest/schemas': 30.0.5
+      ansi-styles: 5.2.0
+      react-is: 18.3.1
+
   process@0.11.10: {}
 
   property-expr@2.0.6: {}
@@ -5503,6 +5585,8 @@ snapshots:
       '@jitl/quickjs-wasmfile-release-asyncify': 0.29.2
       '@jitl/quickjs-wasmfile-release-sync': 0.29.2
       quickjs-emscripten-core: 0.29.2
+
+  react-is@18.3.1: {}
 
   recast@0.23.11:
     dependencies:
