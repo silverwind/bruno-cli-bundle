@@ -27,7 +27,6 @@ build: node_modules $(DIST_FILES)
 
 $(DIST_FILES): $(SOURCE_FILES) pnpm-lock.yaml package.json tsdown.config.ts
 	pnpm exec tsdown
-	cp $(shell find node_modules -path "*quickjs-wasmfile-release-sync/dist/emscripten-module.wasm" -print -quit) dist/
 	chmod +x $(DIST_FILES)
 
 .PHONY: update
