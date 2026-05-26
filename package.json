@@ -14,27 +14,27 @@
   "files": [
     "dist"
   ],
-  "packageManager": "pnpm@10.33.2",
+  "packageManager": "pnpm@10.33.4",
   "engines": {
     "node": ">=20"
   },
   "devDependencies": {
-    "@types/node": "25.7.0",
+    "@types/node": "25.9.1",
     "@types/yargs": "17.0.35",
-    "@typescript/native-preview": "7.0.0-dev.20260512.1",
-    "@usebruno/cli": "3.3.0",
+    "@typescript/native-preview": "7.0.0-dev.20260526.1",
+    "@usebruno/cli": "3.4.0",
     "chalk": "5.6.2",
-    "eslint": "10.3.0",
-    "eslint-config-silverwind": "133.0.1",
+    "eslint": "10.4.0",
+    "eslint-config-silverwind": "133.0.4",
     "jest-extended": "7.0.0",
     "tsdown": "0.22.0",
     "tsdown-config-silverwind": "3.0.1",
     "typescript": "6.0.3",
     "typescript-config-silverwind": "18.0.0",
-    "updates": "17.16.10",
+    "updates": "17.17.2",
     "updates-config-silverwind": "3.0.2",
-    "versions": "15.0.3",
-    "vitest": "4.1.6",
+    "versions": "15.0.4",
+    "vitest": "4.1.7",
     "yargs": "18.0.0"
   }
 }
