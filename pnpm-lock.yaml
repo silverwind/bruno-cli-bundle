@@ -48,8 +48,8 @@ importers:
         specifier: 17.17.3
         version: 17.17.3
       updates-config-silverwind:
-        specifier: 3.0.2
-        version: 3.0.2(prettier@3.8.3)
+        specifier: 4.0.0
+        version: 4.0.0(prettier@3.8.3)
       versions:
         specifier: 15.1.0
         version: 15.1.0
@@ -2605,8 +2605,8 @@ packages:
     peerDependencies:
       browserslist: '>= 4.21.0'
 
-  updates-config-silverwind@3.0.2:
-    resolution: {integrity: sha512-5T/OOdMxvkvNgFpV5uTOcJujTmFfDoMS4yv9Y6SiK+48sA4nVcXPUqg7Ac3s/b41hmC2E225EEotlxtBY8PlYg==}
+  updates-config-silverwind@4.0.0:
+    resolution: {integrity: sha512-5I708X8cDr244ApYk6Yvdgo+DPzNP8FK4QzQphgutLV/+i3T8vli/G1UGee8OlLAD64TgX7ytuNSD3A2q2H8YQ==}
     engines: {node: '>=22'}
     peerDependencies:
       prettier: '*'
@@ -3856,7 +3856,7 @@ snapshots:
       '@usebruno/js': 0.48.0(debug@4.4.3)
       '@usebruno/lang': 0.36.0
       '@usebruno/requests': 0.17.0
-      aws4-axios: 3.4.0(axios@1.13.6)
+      aws4-axios: 3.4.0(axios@1.13.6(debug@4.4.3))
       axios: 1.13.6(debug@4.4.3)
       axios-ntlm: 1.4.6(debug@4.4.3)
       chai: 4.5.0
@@ -4081,7 +4081,7 @@ snapshots:
 
   atob@2.1.2: {}
 
-  aws4-axios@3.4.0(axios@1.13.6):
+  aws4-axios@3.4.0(axios@1.13.6(debug@4.4.3)):
     dependencies:
       '@aws-sdk/client-sts': 3.1063.0
       aws4: 1.13.2
@@ -5496,7 +5496,7 @@ snapshots:
       escalade: 3.2.0
       picocolors: 1.1.1
 
-  updates-config-silverwind@3.0.2(prettier@3.8.3):
+  updates-config-silverwind@4.0.0(prettier@3.8.3):
     dependencies:
       prettier: 3.8.3
 
