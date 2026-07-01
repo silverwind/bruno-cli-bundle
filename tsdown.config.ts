@@ -28,6 +28,8 @@ export default defineConfig(nodeCli({
   target: "node20",
   alias: {
     "quickjs-emscripten": quickjsPath,
+    // not hoisted to top-level node_modules, so resolve it via @usebruno/cli's copy
+    "@usebruno/requests": dirname(requestsPath),
   },
   copy: [wasmPath],
   inputOptions: {

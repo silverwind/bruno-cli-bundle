@@ -11,12 +11,17 @@ import {CLI_EPILOGUE, CLI_VERSION} from "@usebruno/cli/src/constants";
 import runCommand from "@usebruno/cli/src/commands/run";
 // @ts-expect-error untyped module
 import importCommand from "@usebruno/cli/src/commands/import";
+// @ts-expect-error untyped module
+import {initializeShellEnv} from "@usebruno/requests";
 
 const printBanner = () => {
   console.log(chalk.yellow(`Bru CLI ${CLI_VERSION}`)); // eslint-disable-line no-console
 };
 
-const run = () => {
+const run = async () => {
+  // Fetch shell environment (useful when CLI is run as subprocess from GUI app or cron)
+  await initializeShellEnv();
+
   const commandsToPrintBanner = ["--help", "-h"];
 
   if (process.argv.length <= 2 || process.argv.some((arg) => commandsToPrintBanner.includes(arg))) {
@@ -35,4 +40,4 @@ const run = () => {
     .parse();
 };
 
-run();
+await run();
