@@ -15,7 +15,7 @@ import importCommand from "@usebruno/cli/src/commands/import";
 import {initializeShellEnv} from "@usebruno/requests";
 
 const printBanner = () => {
-  console.log(chalk.yellow(`Bru CLI ${CLI_VERSION}`)); // eslint-disable-line no-console
+  console.log(chalk.yellow(`Bru CLI ${CLI_VERSION}`)); // eslint-disable-line no-console -- banner is CLI output
 };
 
 const run = async () => {
