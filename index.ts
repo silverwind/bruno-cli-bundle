@@ -34,6 +34,7 @@ const run = async () => {
     .command(importCommand)
     .epilogue(CLI_EPILOGUE)
     .usage("Usage: $0 <command> [options]")
+    .version(CLI_VERSION)
     .demandCommand(1, "Woof!! Let's play with some APIs!!")
     .help("h")
     .alias("h", "help")

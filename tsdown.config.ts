@@ -17,12 +17,25 @@ export default defineConfig(nodeCli({
   shims: true,
   clean: true,
   format: "esm",
-  target: "node20",
+  target: "node24",
   alias: {
     // not hoisted to top-level node_modules, so resolve it via @usebruno/cli's copy
     "@usebruno/requests": dirname(requestsPath),
   },
   copy: [wasmPath],
+  plugins: [{
+    // developer sandbox loads npm modules from disk, serve the safe sandbox's bundled libraries instead
+    name: "developer-sandbox-libs",
+    transform(code: string, id: string) {
+      if (!id.endsWith("/sandbox/node-vm/cjs-loader.js")) return;
+      const search = "} catch (mainError) {";
+      if (!code.includes(search)) throw new Error(`cjs-loader.js no longer contains "${search}"`);
+      return `${code.replace(search, `${search}
+      safeModeLibs ??= vm.runInContext(\`(\${require("../bundle-browser-rollup")})(); requireObject\`, vm.createContext({crypto}));
+      if (Object.hasOwn(safeModeLibs, moduleName)) return safeModeLibs[moduleName];`)}
+let safeModeLibs;`;
+    },
+  }],
   inputOptions: {
     // suppress warnings about eval() in @usebruno/requests
     onLog(level, log, defaultHandler) {

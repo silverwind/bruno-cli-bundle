@@ -15,7 +15,7 @@ function run(args: string[]): Promise<{code: number | null; stdout: string; stde
   });
 }
 
-test("run ping.yml against mock server", async () => {
+test.for(["safe", "developer"])("run ping.yml with %s sandbox against mock server", async (sandbox) => {
   const server = createServer((_req, res) => {
     res.writeHead(200, {"Content-Type": "text/plain"});
     res.end("pong");
@@ -32,6 +32,7 @@ test("run ping.yml against mock server", async () => {
     const {code, stdout, stderr} = await run([
       "run", "ping.yml",
       "--env-var", `baseUrl=http://127.0.0.1:${port}`,
+      "--sandbox", sandbox,
     ]);
 
     if (code !== 0) {

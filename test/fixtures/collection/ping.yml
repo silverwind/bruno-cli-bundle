@@ -10,3 +10,7 @@ runtime:
     - expression: res.status
       operator: eq
       value: "200"
+  scripts:
+    - type: tests
+      code: |-
+        test("require", () => expect(require("crypto-js").MD5("a").toString()).to.equal("0cc175b9c0f1b6a831c399e269772661"));
