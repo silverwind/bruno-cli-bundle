@@ -3,7 +3,10 @@
   "version": "2.1.0",
   "description": "Bundled version of @usebruno/cli",
   "author": "silverwind",
-  "repository": "silverwind/bruno-cli-bundle",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silverwind/bruno-cli-bundle.git"
+  },
   "license": "BSD-2-Clause",
   "bin": {
     "bru": "dist/index.js",
