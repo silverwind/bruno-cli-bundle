@@ -1,5 +1,6 @@
 import {execFile} from "node:child_process";
 import {createServer} from "node:http";
+import type {AddressInfo} from "node:net";
 import {resolve} from "node:path";
 import {test, expect} from "vitest";
 
@@ -25,8 +26,7 @@ test.for(["safe", "developer"])("run ping.yml with %s sandbox against mock serve
     server.listen(0, "127.0.0.1", resolve);
   });
 
-  const addr = server.address();
-  const port = typeof addr === "object" && addr ? addr.port : 0;
+  const {port} = server.address() as AddressInfo;
 
   try {
     const {code, stdout, stderr} = await run([

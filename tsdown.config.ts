@@ -13,11 +13,7 @@ const wasmPath = createRequire(quickjsPkg).resolve("@jitl/quickjs-wasmfile-relea
 
 export default defineConfig(nodeCli({
   url: import.meta.url,
-  entry: ["./index.ts"],
   shims: true,
-  clean: true,
-  format: "esm",
-  target: "node24",
   alias: {
     // not hoisted to top-level node_modules, so resolve it via @usebruno/cli's copy
     "@usebruno/requests": dirname(requestsPath),

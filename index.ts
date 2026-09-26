@@ -1,7 +1,5 @@
 #!/usr/bin/env node
-// Replicates @usebruno/cli/src/index.js because the upstream uses
-// yargs.commandDir() which relies on runtime filesystem scanning
-// and is incompatible with bundling.
+// Replicates @usebruno/cli/src/index.js whose runtime yargs.commandDir() scan breaks bundling
 
 import yargs from "yargs";
 import chalk from "chalk";
@@ -14,31 +12,20 @@ import importCommand from "@usebruno/cli/src/commands/import";
 // @ts-expect-error untyped module
 import {initializeShellEnv} from "@usebruno/requests";
 
-const printBanner = () => {
+await initializeShellEnv(); // for when the CLI runs as subprocess of a GUI app or cron
+
+if (process.argv.length <= 2 || process.argv.some((arg) => arg === "--help" || arg === "-h")) {
   console.log(chalk.yellow(`Bru CLI ${CLI_VERSION}`)); // eslint-disable-line no-console -- banner is CLI output
-};
+}
 
-const run = async () => {
-  // Fetch shell environment (useful when CLI is run as subprocess from GUI app or cron)
-  await initializeShellEnv();
-
-  const commandsToPrintBanner = ["--help", "-h"];
-
-  if (process.argv.length <= 2 || process.argv.some((arg) => commandsToPrintBanner.includes(arg))) {
-    printBanner();
-  }
-
-  yargs(process.argv.slice(2))
-    .strict()
-    .command(runCommand)
-    .command(importCommand)
-    .epilogue(CLI_EPILOGUE)
-    .usage("Usage: $0 <command> [options]")
-    .version(CLI_VERSION)
-    .demandCommand(1, "Woof!! Let's play with some APIs!!")
-    .help("h")
-    .alias("h", "help")
-    .parse();
-};
-
-await run();
+yargs(process.argv.slice(2))
+  .strict()
+  .command(runCommand)
+  .command(importCommand)
+  .epilogue(CLI_EPILOGUE)
+  .usage("Usage: $0 <command> [options]")
+  .version(CLI_VERSION)
+  .demandCommand(1, "Woof!! Let's play with some APIs!!")
+  .help("h")
+  .alias("h", "help")
+  .parse();
