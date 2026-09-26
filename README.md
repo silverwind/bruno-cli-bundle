@@ -6,8 +6,7 @@
 ## Usage
 
 ```sh
-pnpm add -D bruno-cli-bundle
-pnpm exec bru run
+pnpm dlx bruno-cli-bundle run
 ```
 
 © [silverwind](https://github.com/silverwind), distributed under BSD licence
