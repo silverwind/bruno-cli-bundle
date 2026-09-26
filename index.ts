@@ -6,9 +6,11 @@ import chalk from "chalk";
 // @ts-expect-error untyped module
 import {CLI_EPILOGUE, CLI_VERSION} from "@usebruno/cli/src/constants";
 // @ts-expect-error untyped module
-import runCommand from "@usebruno/cli/src/commands/run";
+import docsCommand from "@usebruno/cli/src/commands/docs";
 // @ts-expect-error untyped module
 import importCommand from "@usebruno/cli/src/commands/import";
+// @ts-expect-error untyped module
+import runCommand from "@usebruno/cli/src/commands/run";
 // @ts-expect-error untyped module
 import {initializeShellEnv} from "@usebruno/requests";
 
@@ -20,8 +22,9 @@ if (process.argv.length <= 2 || process.argv.some((arg) => arg === "--help" || a
 
 yargs(process.argv.slice(2))
   .strict()
-  .command(runCommand)
+  .command(docsCommand)
   .command(importCommand)
+  .command(runCommand)
   .epilogue(CLI_EPILOGUE)
   .usage("Usage: $0 <command> [options]")
   .version(CLI_VERSION)

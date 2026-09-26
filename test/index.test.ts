@@ -1,7 +1,9 @@
 import {execFile} from "node:child_process";
+import {mkdtemp, readFile, rm} from "node:fs/promises";
 import {createServer} from "node:http";
 import type {AddressInfo} from "node:net";
-import {resolve} from "node:path";
+import {tmpdir} from "node:os";
+import {join, resolve} from "node:path";
 import {test, expect} from "vitest";
 
 const root = resolve(import.meta.dirname, "..");
@@ -44,5 +46,16 @@ test.for(["safe", "developer"])("run ping.yml with %s sandbox against mock serve
     expect(stdout).toContain("PASS");
   } finally {
     server.close();
+  }
+});
+
+test("docs generate writes collection docs", async () => {
+  const outDir = await mkdtemp(join(tmpdir(), "bruno-cli-bundle-"));
+  try {
+    const output = join(outDir, "docs.html");
+    expect((await run(["docs", "generate", "-o", output])).code).toBe(0);
+    expect(await readFile(output, "utf8")).toContain("<title>test - API Documentation</title>");
+  } finally {
+    await rm(outDir, {recursive: true});
   }
 });
