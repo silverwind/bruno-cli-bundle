@@ -26,7 +26,7 @@ export default defineConfig(nodeCli({
       if (!id.endsWith("/sandbox/node-vm/cjs-loader.js")) return;
       const search = "} catch (mainError) {";
       if (!code.includes(search)) throw new Error(`cjs-loader.js no longer contains "${search}"`);
-      return `${code.replace(search, `${search}
+      return `${code.replace(search, () => `${search}
       safeModeLibs ??= vm.runInContext(\`(\${require("../bundle-browser-rollup")})(); requireObject\`, vm.createContext({crypto}));
       if (Object.hasOwn(safeModeLibs, moduleName)) return safeModeLibs[moduleName];`)}
 let safeModeLibs;`;

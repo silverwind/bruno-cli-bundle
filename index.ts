@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 // Replicates @usebruno/cli/src/index.js whose runtime yargs.commandDir() scan breaks bundling
 
+import {styleText} from "node:util";
 import yargs from "yargs";
-import chalk from "chalk";
 // @ts-expect-error untyped module
 import {CLI_EPILOGUE, CLI_VERSION} from "@usebruno/cli/src/constants";
 // @ts-expect-error untyped module
@@ -17,7 +17,7 @@ import {initializeShellEnv} from "@usebruno/requests";
 await initializeShellEnv(); // for when the CLI runs as subprocess of a GUI app or cron
 
 if (process.argv.length <= 2 || process.argv.some((arg) => arg === "--help" || arg === "-h")) {
-  console.log(chalk.yellow(`Bru CLI ${CLI_VERSION}`)); // eslint-disable-line no-console -- banner is CLI output
+  console.log(styleText("yellow", `Bru CLI ${CLI_VERSION}`)); // eslint-disable-line no-console -- banner is CLI output
 }
 
 yargs(process.argv.slice(2))
