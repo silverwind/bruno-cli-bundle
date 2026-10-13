@@ -3,5 +3,4 @@ updateNotifier: false
 ignoreScripts: true
 minimumReleaseAge: 0
 verifyDepsBeforeRun: false
-overrides:
-  yaml: 2.9.1
+dlxCacheMaxAge: 0

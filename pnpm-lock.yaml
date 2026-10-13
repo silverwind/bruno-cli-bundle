@@ -162,9 +162,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-overrides:
-  yaml: 2.9.1
-
 importers:
 
   .:
@@ -211,6 +208,9 @@ importers:
       vitest:
         specifier: 5.0.3
         version: 5.0.3(@types/node@26.6.3)(vite@8.3.2(@types/node@26.6.3)(yaml@2.9.1))
+      yaml:
+        specifier: 2.9.1
+        version: 2.9.1
       yargs:
         specifier: 18.2.0
         version: 18.2.0
@@ -3139,7 +3139,7 @@ packages:
       sugarss: ^5.0.0
       terser: ^5.16.0
       tsx: ^4.8.1
-      yaml: 2.9.1
+      yaml: ^2.4.2
     peerDependenciesMeta:
       '@types/node':
         optional: true
@@ -3304,6 +3304,10 @@ packages:
 
   yallist@3.1.1:
     resolution: {integrity: sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==}
+
+  yaml@2.3.4:
+    resolution: {integrity: sha512-8aAvwVUSHpfEqTQ4w/KMlf3HcRdt50E5ODIQJBw1fQ5RL34xabzxtUlzTXVqc4rkZsPbvrXKWnABCD7kWSmocA==}
+    engines: {node: '>= 14'}
 
   yaml@2.9.1:
     resolution: {integrity: sha512-3NxN8+78OdzbT7C/WjGsyfPAtJaN3FNDsWxv7Y7mcDsT/oOmgW8BpyQQFFBnvZE3j9Y2Sdz1ULFLezL7Eb2yFw==}
@@ -4734,7 +4738,7 @@ snapshots:
       '@usebruno/lang': 0.40.0
       ajv: 8.20.0
       lodash: 4.18.1
-      yaml: 2.9.1
+      yaml: 2.3.4
 
   '@usebruno/js@0.52.0(debug@4.4.3(supports-color@7.2.0))(supports-color@7.2.0)':
     dependencies:
@@ -4762,7 +4766,7 @@ snapshots:
       uuid: 10.0.0
       xml-formatter: 3.7.0
       xml2js: 0.6.2
-      yaml: 2.9.1
+      yaml: 2.3.4
     transitivePeerDependencies:
       - debug
       - encoding
@@ -6691,6 +6695,8 @@ snapshots:
   y18n@5.0.8: {}
 
   yallist@3.1.1: {}
+
+  yaml@2.3.4: {}
 
   yaml@2.9.1: {}
 

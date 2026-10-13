@@ -17,6 +17,7 @@ export default defineConfig(nodeCli({
   alias: {
     // not hoisted to top-level node_modules, so resolve it via @usebruno/cli's copy
     "@usebruno/requests": dirname(requestsPath),
+    "yaml": dirname(require.resolve("yaml/package.json")), // @usebruno/* pin yaml 2.3.4, which lacks merge key support
   },
   copy: [wasmPath],
   plugins: [{
