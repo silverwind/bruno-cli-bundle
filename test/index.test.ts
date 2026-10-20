@@ -20,7 +20,7 @@ test.for(["safe", "developer"])("run ping.yml with %s sandbox against mock serve
     "--env-var", `baseUrl=http://127.0.0.1:${(server.address() as AddressInfo).port}`,
     "--sandbox", sandbox,
   ]);
-  expect(stdout).toContain("PASS");
+  expect(stdout).toContain("✓ require");
 });
 
 test("docs generate writes collection docs", async () => {

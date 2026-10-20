@@ -1,4 +1,5 @@
 info:
+	# tab-indented comment, rejected by yaml 2.3.4
   name: ping
   type: http
   seq: 1
