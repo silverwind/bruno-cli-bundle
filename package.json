@@ -17,21 +17,21 @@
   "files": [
     "dist"
   ],
-  "packageManager": "pnpm@12.14.0",
+  "packageManager": "pnpm@12.16.1",
   "engines": {
     "node": ">=24"
   },
   "devDependencies": {
-    "@types/node": "26.6.5",
+    "@types/node": "26.6.6",
     "@types/yargs": "17.0.35",
-    "@usebruno/cli": "4.2.1",
-    "eslint": "10.13.0",
+    "@usebruno/cli": "4.3.0",
+    "eslint": "10.14.0",
     "eslint-config-silverwind": "155.2.0",
     "tsdown": "0.23.4",
     "tsdown-config-silverwind": "4.2.0",
     "typescript": "7.0.2",
     "typescript-config-silverwind": "21.0.2",
-    "updates": "19.2.1",
+    "updates": "20.0.0",
     "updates-config-silverwind": "4.1.0",
     "versions": "15.5.2",
     "vitest": "5.0.5",
